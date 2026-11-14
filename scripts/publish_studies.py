@@ -39,8 +39,8 @@ def parse(path):
 
 def paragraph(text,style):
     text=escape(text)
-    text=re.sub(r'\\*\\*(.+?)\\*\\*',r'<b>\\1</b>',text)
-    text=re.sub(r'\\*(.+?)\\*',r'<i>\\1</i>',text)
+    text=re.sub(r'\*\*(.+?)\*\*',r'<b>\1</b>',text)
+    text=re.sub(r'\*(.+?)\*',r'<i>\1</i>',text)
     return Paragraph(text,style)
 
 def generate(title,body,target):
