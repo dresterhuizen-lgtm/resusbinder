@@ -30,7 +30,7 @@ def wrap(d,t,f,width):
  return out or ['']
 def render(title,sub,sections,base):
  A.mkdir(exist_ok=True)
- images=[];idx=0;col=0;x=72;y=255
+ images=[];idx=0;col=0;x=72;y=255;im=None;d=None
  def start():
   nonlocal idx,col,x,y,im,d
   idx+=1;col=0;x=72;y=255
