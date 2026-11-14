@@ -77,175 +77,202 @@
   },
   {
     "id": "png-daily-review-12-nov-1",
-    "title": "Daily Resuscitation Learning - 12 November 2026 - page 1",
+    "title": "Daily Resuscitation Learning — 12 Nov 2026 · 01 BIG-1 trauma: haemorrhage disposition",
     "file": "daily-review-12-nov-01.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "Trauma / Environmental"
     ],
     "tags": [
-      "Studies"
+      "Studies",
+      "Trauma / Environmental"
     ],
     "studies": true,
     "binder": false,
     "ccr": false,
     "width": 1600,
     "height": 2250,
-    "high_yield": true,
-    "recent_rank": 0,
-    "replaces_id": 93
+    "high_yield": false,
+    "recent_rank": 999,
+    "replaces_id": 93,
+    "collection": "Daily Resuscitation Learning · 12–13 Nov 2026",
+    "collection_order": 1
   },
   {
     "id": "png-daily-review-12-nov-2",
-    "title": "Daily Resuscitation Learning - 12 November 2026 - page 2",
+    "title": "Daily Resuscitation Learning — 12 Nov 2026 · 02 VExUS: systemic venous congestion",
     "file": "daily-review-12-nov-02.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "POCUS & Procedures"
     ],
     "tags": [
-      "Studies"
+      "Studies",
+      "POCUS & Procedures"
     ],
     "studies": true,
     "binder": false,
     "ccr": false,
     "width": 1600,
     "height": 2250,
-    "high_yield": true,
-    "recent_rank": 0
+    "high_yield": false,
+    "recent_rank": 999,
+    "collection": "Daily Resuscitation Learning · 12–13 Nov 2026",
+    "collection_order": 2
   },
   {
     "id": "png-daily-review-12-nov-3",
-    "title": "Daily Resuscitation Learning - 12 November 2026 - page 3",
+    "title": "Daily Resuscitation Learning — 12 Nov 2026 · 03 Sedation during respiratory failure",
     "file": "daily-review-12-nov-03.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "Airway & Respiratory"
     ],
     "tags": [
-      "Studies"
+      "Studies",
+      "Airway & Respiratory"
     ],
     "studies": true,
     "binder": false,
     "ccr": false,
     "width": 1600,
     "height": 2250,
-    "high_yield": true,
-    "recent_rank": 0
+    "high_yield": false,
+    "recent_rank": 999,
+    "collection": "Daily Resuscitation Learning · 12–13 Nov 2026",
+    "collection_order": 3
   },
   {
     "id": "png-daily-review-12-nov-4",
-    "title": "Daily Resuscitation Learning - 12 November 2026 - page 4",
+    "title": "Daily Resuscitation Learning — 12 Nov 2026 · 04 ARDS: bedside recognition and management",
     "file": "daily-review-12-nov-04.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "Airway & Respiratory"
     ],
     "tags": [
-      "Studies"
+      "Studies",
+      "Airway & Respiratory"
     ],
     "studies": true,
     "binder": false,
     "ccr": false,
     "width": 1600,
     "height": 2250,
-    "high_yield": true,
-    "recent_rank": 0
+    "high_yield": false,
+    "recent_rank": 999,
+    "collection": "Daily Resuscitation Learning · 12–13 Nov 2026",
+    "collection_order": 4
   },
   {
     "id": "png-daily-review-12-nov-5",
-    "title": "Daily Resuscitation Learning - 12 November 2026 - page 5",
+    "title": "Daily Resuscitation Learning — 12 Nov 2026 · 05 Cardiac POCUS with AI-assisted echocardiography",
     "file": "daily-review-12-nov-05.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "POCUS & Procedures"
     ],
     "tags": [
-      "Studies"
+      "Studies",
+      "POCUS & Procedures"
     ],
     "studies": true,
     "binder": false,
     "ccr": false,
     "width": 1600,
     "height": 2250,
-    "high_yield": true,
-    "recent_rank": 0
+    "high_yield": false,
+    "recent_rank": 999,
+    "collection": "Daily Resuscitation Learning · 12–13 Nov 2026",
+    "collection_order": 5
   },
   {
     "id": "png-daily-review-12-nov-6",
-    "title": "Daily Resuscitation Learning - 12 November 2026 - page 6",
+    "title": "Daily Resuscitation Learning — 12 Nov 2026 · 06 Venous blood gases in emergency care",
     "file": "daily-review-12-nov-06.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "Renal / Metabolic"
     ],
     "tags": [
-      "Studies"
+      "Studies",
+      "Renal / Metabolic"
     ],
     "studies": true,
     "binder": false,
     "ccr": false,
     "width": 1600,
     "height": 2250,
-    "high_yield": true,
-    "recent_rank": 0
+    "high_yield": false,
+    "recent_rank": 999,
+    "collection": "Daily Resuscitation Learning · 12–13 Nov 2026",
+    "collection_order": 6
   },
   {
     "id": "png-daily-review-12-nov-7",
-    "title": "Daily Resuscitation Learning - 12 November 2026 - page 7",
+    "title": "Daily Resuscitation Learning — 12 Nov 2026 · 07 Procedural bleeding in cirrhosis",
     "file": "daily-review-12-nov-07.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "GI / Pediatrics"
     ],
     "tags": [
-      "Studies"
+      "Studies",
+      "GI / Pediatrics"
     ],
     "studies": true,
     "binder": false,
     "ccr": false,
     "width": 1600,
     "height": 2250,
-    "high_yield": true,
-    "recent_rank": 0
+    "high_yield": false,
+    "recent_rank": 999,
+    "collection": "Daily Resuscitation Learning · 12–13 Nov 2026",
+    "collection_order": 7
   },
   {
     "id": "png-daily-review-13-nov-1",
-    "title": "Daily Resuscitation Learning - 13 November 2026 - page 1",
+    "title": "Daily Resuscitation Learning — 13 Nov 2026 · 01 VASSPR: vasopressin timing in septic shock",
     "file": "daily-review-13-nov-01.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "Shock & Hemodynamics"
     ],
     "tags": [
-      "Studies"
+      "Studies",
+      "Shock & Hemodynamics"
     ],
     "studies": true,
     "binder": false,
     "ccr": false,
     "width": 1600,
     "height": 2250,
-    "high_yield": true,
-    "recent_rank": 0,
-    "replaces_id": 94
+    "high_yield": false,
+    "recent_rank": 999,
+    "replaces_id": 94,
+    "collection": "Daily Resuscitation Learning · 12–13 Nov 2026",
+    "collection_order": 8
   },
   {
     "id": "png-daily-review-13-nov-2",
-    "title": "Daily Resuscitation Learning - 13 November 2026 - page 2",
+    "title": "Daily Resuscitation Learning — 13 Nov 2026 · 02 Prehospital whole blood for traumatic haemorrhage",
     "file": "daily-review-13-nov-02.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "Trauma / Environmental"
     ],
     "tags": [
-      "Studies"
+      "Studies",
+      "Trauma / Environmental"
     ],
     "studies": true,
     "binder": false,
     "ccr": false,
     "width": 1600,
     "height": 2250,
-    "high_yield": true,
-    "recent_rank": 0
+    "high_yield": false,
+    "recent_rank": 999,
+    "collection": "Daily Resuscitation Learning · 12–13 Nov 2026",
+    "collection_order": 9
   }
 ]
