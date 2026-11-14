@@ -1,0 +1,38 @@
+name: Publish Resus Binder studies
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'publications/pending/**'
+      - 'scripts/publish_studies.py'
+      - '.github/workflows/publish-studies.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: resus-binder-publications
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'reportlab==4.4.4'
+      - name: Generate and validate PDFs
+        run: python scripts/publish_studies.py
+      - name: Commit generated documents
+        run: |
+          git add assets/*.pdf uploads.json
+          if git diff --cached --quiet; then
+            echo "No new documents"
+            exit 0
+          fi
+          git config user.name "resusbinder-publisher[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish generated clinical study PDFs"
+          git push
