@@ -52,7 +52,8 @@ def render(title,sub,sections,base):
   else:save();start()
  start()
  for heading,paragraphs in sections:
-  if y+150>H-160:nextcol()
+  need=89+sum(len(wrap(d,p[2:] if p.startswith('- ') else p,F(23),650 if p.startswith('- ') else 685))*35+12 for p in paragraphs)
+  if need < (H-415) and y+need>H-155:nextcol()
   d.rounded_rectangle((x,y,x+700,y+51),radius=8,fill='#123752')
   d.text((x+16,y+8),heading.upper()[:35],font=F(27,True),fill='white')
   y+=69
@@ -80,9 +81,12 @@ for name,base,title,old_id in [
  ('daily-resuscitation-learning-2026-11-12.pdf','daily-review-12-nov','Daily Resuscitation Learning - 12 November 2026',93),
  ('daily-resuscitation-learning-2026-11-13.pdf','daily-review-13-nov','Daily Resuscitation Learning - 13 November 2026',94)]:
  doc=fitz.open(A/name)
- content='\n\n'.join(page.get_text('text') for page in doc)
- chunks=[re.sub(r'\s+',' ',p).strip() for p in re.split(r'\n\s*\n',content) if len(p.strip())>15]
- imgs=render(title,'Retypeset from original clinical review', [('TEACHING REVIEW',chunks)],base)
+ imgs=[]
+ for idx,page in enumerate(doc,1):
+  filename=f'{base}-{idx:02d}.png'
+  pix=page.get_pixmap(matrix=fitz.Matrix(2.2,2.2),alpha=False)
+  pix.save(str(A/filename))
+  imgs.append(filename)
  for j,file in enumerate(imgs,1):
   new.append(entry(title+(f' - page {j}' if len(imgs)>1 else ''),file,f'png-{base}-{j}',extra={'replaces_id':old_id} if j==1 else {}))
 C.write_text(json.dumps(new+items,ensure_ascii=False,indent=2)+'\n')
