@@ -1,11 +1,11 @@
 [
   {
-    "id": "auto-c59df9646821",
-    "title": "PRAXIS Critical Appraisal - When to Stop Giving Fluid (13 Nov 2026)",
-    "pdf": "praxis-critical-appraisal-when-to-stop-giving-fluid-13-nov-2026-c59df9646821.pdf",
+    "id": "png-arise-fluids-1",
+    "title": "ARISE FLUIDS - Early vasopressors versus more IV fluid",
+    "file": "arise-fluids-01.png",
     "thumb": "",
     "categories": [
-      "Other"
+      "Shock & Hemodynamics"
     ],
     "tags": [
       "Studies"
@@ -13,15 +13,72 @@
     "studies": true,
     "binder": false,
     "ccr": false,
-    "high_yield": false,
-    "width": 600,
-    "height": 800,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
     "recent_rank": 0
   },
   {
-    "id": "upload-5b3c89a5",
-    "title": "Daily Resuscitation Learning — Etomidate vs Ketamine",
-    "pdf": "daily-resuscitation-learning-etomidate-vs-ketamine-5b3c89a5.pdf",
+    "id": "png-gao-crt-lactate-1",
+    "title": "Gao et al. - CRT-guided versus lactate-guided resuscitation",
+    "file": "gao-crt-lactate-01.png",
+    "thumb": "",
+    "categories": [
+      "Shock & Hemodynamics"
+    ],
+    "tags": [
+      "Studies"
+    ],
+    "studies": true,
+    "binder": false,
+    "ccr": false,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
+    "recent_rank": 0
+  },
+  {
+    "id": "png-melo-fluid-intolerance-1",
+    "title": "Melo et al. - Fluid intolerance during septic shock",
+    "file": "melo-fluid-intolerance-01.png",
+    "thumb": "",
+    "categories": [
+      "Shock & Hemodynamics"
+    ],
+    "tags": [
+      "Studies"
+    ],
+    "studies": true,
+    "binder": false,
+    "ccr": false,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
+    "recent_rank": 0
+  },
+  {
+    "id": "png-rsi-etomidate-ketamine-1",
+    "title": "RSI induction - Etomidate versus ketamine",
+    "file": "rsi-etomidate-ketamine-01.png",
+    "thumb": "",
+    "categories": [
+      "Airway & Respiratory"
+    ],
+    "tags": [
+      "Studies"
+    ],
+    "studies": true,
+    "binder": false,
+    "ccr": false,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
+    "recent_rank": 0
+  },
+  {
+    "id": "png-daily-review-12-nov-1",
+    "title": "Daily Resuscitation Learning - 12 November 2026 - page 1",
+    "file": "daily-review-12-nov-01.png",
     "thumb": "",
     "categories": [
       "Other"
@@ -32,10 +89,106 @@
     "studies": true,
     "binder": false,
     "ccr": false,
-    "high_yield": false,
-    "width": 600,
-    "height": 800,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
     "recent_rank": 0,
-    "uploaded_at": "2026-11-14T03:42:27.324Z"
+    "replaces_id": 93
+  },
+  {
+    "id": "png-daily-review-12-nov-2",
+    "title": "Daily Resuscitation Learning - 12 November 2026 - page 2",
+    "file": "daily-review-12-nov-02.png",
+    "thumb": "",
+    "categories": [
+      "Other"
+    ],
+    "tags": [
+      "Studies"
+    ],
+    "studies": true,
+    "binder": false,
+    "ccr": false,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
+    "recent_rank": 0
+  },
+  {
+    "id": "png-daily-review-12-nov-3",
+    "title": "Daily Resuscitation Learning - 12 November 2026 - page 3",
+    "file": "daily-review-12-nov-03.png",
+    "thumb": "",
+    "categories": [
+      "Other"
+    ],
+    "tags": [
+      "Studies"
+    ],
+    "studies": true,
+    "binder": false,
+    "ccr": false,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
+    "recent_rank": 0
+  },
+  {
+    "id": "png-daily-review-12-nov-4",
+    "title": "Daily Resuscitation Learning - 12 November 2026 - page 4",
+    "file": "daily-review-12-nov-04.png",
+    "thumb": "",
+    "categories": [
+      "Other"
+    ],
+    "tags": [
+      "Studies"
+    ],
+    "studies": true,
+    "binder": false,
+    "ccr": false,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
+    "recent_rank": 0
+  },
+  {
+    "id": "png-daily-review-13-nov-1",
+    "title": "Daily Resuscitation Learning - 13 November 2026 - page 1",
+    "file": "daily-review-13-nov-01.png",
+    "thumb": "",
+    "categories": [
+      "Other"
+    ],
+    "tags": [
+      "Studies"
+    ],
+    "studies": true,
+    "binder": false,
+    "ccr": false,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
+    "recent_rank": 0,
+    "replaces_id": 94
+  },
+  {
+    "id": "png-daily-review-13-nov-2",
+    "title": "Daily Resuscitation Learning - 13 November 2026 - page 2",
+    "file": "daily-review-13-nov-02.png",
+    "thumb": "",
+    "categories": [
+      "Other"
+    ],
+    "tags": [
+      "Studies"
+    ],
+    "studies": true,
+    "binder": false,
+    "ccr": false,
+    "width": 1600,
+    "height": 2250,
+    "high_yield": true,
+    "recent_rank": 0
   }
 ]
