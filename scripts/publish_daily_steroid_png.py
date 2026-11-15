@@ -72,8 +72,24 @@ def main():
             d.text((x+17,y+9),heading,font=HEAD if d.textbbox((0,0),heading,font=HEAD)[2]<WIDTH-35 else font(24,True),fill='#ffffff')
             y+=62
             for item in rows:
-                item=re.sub(r'^-\\s*', '', item)
-                numbered=re.match(r'^(\\d+)\\. (.+)
+                item = re.sub(r'^-\s*', '', item)
+                numbered = re.match(r'^(\d+)\. (.+)$', item)
+                refs = heading == 'REFERENCES / GUIDELINES'
+                size = REF if refs else BODY
+                leading = 26 if refs else 34
+                if numbered:
+                    d.text((x+7,y+2), numbered.group(1)+'.', font=font(23,True), fill=TEAL)
+                    lines = wrap(d, numbered.group(2), size, WIDTH-60)
+                    indent = 40
+                else:
+                    d.ellipse((x+8,y+12,x+16,y+20), fill=TEAL)
+                    lines = wrap(d, item, size, WIDTH-41)
+                    indent = 28
+                for line in lines:
+                    d.text((x+indent,y),line,font=size,fill=INK)
+                    y += leading
+                y += 12 if not refs else 8
+            y += 16
     d.line((72,H-105,W-72,H-105),fill=DIV,width=3)
     d.text((72,H-88),'REVIEW LEVEL: ORIGINAL ABSTRACT REVIEWED; NETWORK COMPARISONS REQUIRE CAUTION',font=REF,fill=MUTED)
     d.text((W-265,H-88),'RESUS BINDER',font=font(20,True),fill=TEAL)
