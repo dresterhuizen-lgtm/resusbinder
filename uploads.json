@@ -1,5 +1,30 @@
 [
   {
+    "id": "daily-2026-11-14-septic-shock-steroids",
+    "title": "Daily Resuscitation Learning — 14 Nov 2026 · Steroids in septic shock",
+    "file": "daily-2026-11-14-septic-shock-steroids.png",
+    "thumb": "",
+    "categories": [
+      "Shock & Hemodynamics"
+    ],
+    "tags": [
+      "Studies",
+      "Septic Shock",
+      "Steroids",
+      "Hydrocortisone",
+      "Fludrocortisone"
+    ],
+    "studies": true,
+    "binder": false,
+    "ccr": false,
+    "width": 1800,
+    "height": 2600,
+    "high_yield": true,
+    "recent_rank": 0,
+    "collection": "Daily Resuscitation Learning · 14 Nov 2026",
+    "collection_order": 1
+  },
+  {
     "id": "png-arise-fluids-1",
     "title": "ARISE FLUIDS - Early vasopressors versus more IV fluid",
     "file": "arise-fluids-01.png",
