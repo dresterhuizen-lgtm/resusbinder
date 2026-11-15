@@ -25,7 +25,7 @@ jobs:
         run: python scripts/publish_daily_steroid_png.py
       - name: Commit image and catalog without altering other entries
         run: |
-          git add assets/daily-2026-11-14-septic-shock-steroids.png uploads.json
+          git add assets/daily-2026-11-14-septic-shock-steroids-v2.png uploads.json
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "resusbinder-publisher[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
