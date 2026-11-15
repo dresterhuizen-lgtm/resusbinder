@@ -162,10 +162,23 @@ function render(){state.visible=filtered();const g=$('#grid');g.innerHTML='';con
  const collection=state.view==='studies'?state.visible.filter(p=>p.collection):[];
  const standalone=state.view==='studies'?state.visible.filter(p=>!p.collection):state.visible;
  if(collection.length){
-   const cover=collection[0];
-   const d=document.createElement('article'); d.className='collection-card';
-   d.innerHTML='<div class="collection-cover"><img loading="lazy" src="'+url('assets/'+cover.file)+'" alt=""></div><div class="collection-info"><div class="collection-kicker">Study collection · 12–13 November 2026</div><h4>Daily Resuscitation Learning</h4><p>Nine illustrated teaching sheets covering shock, trauma, airway, POCUS, blood gases and procedural bleeding.</p><div class="collection-foot"><span>Open the sheets in sequence</span><span class="collection-pill">9 PNG pages</span></div></div>';
-   d.onclick=()=>openPage(collection[0],collection); g.appendChild(d);
+   const groups=new Map();
+   for(const p of collection){
+     const key=p.collection;
+     if(!groups.has(key))groups.set(key,[]);
+     groups.get(key).push(p);
+   }
+   for(const [name,group] of groups){
+     group.sort((a,b)=>(a.collection_order||0)-(b.collection_order||0));
+     const cover=group[0], count=group.length;
+     const d=document.createElement('article'); d.className='collection-card';
+     d.innerHTML='<div class="collection-cover"><img loading="lazy" src="'+url('assets/'+cover.file)+'" alt="'+esc(name)+'"></div>'+
+       '<div class="collection-info"><div class="collection-kicker">Study collection</div><h4>'+esc(name)+'</h4>'+
+       '<p>'+count+' clinical teaching '+(count===1?'page':'pages')+' · click to view full resolution</p>'+
+       '<div class="collection-foot"><span>Open the '+(count===1?'handout':'sheets in sequence')+'</span><span class="collection-pill">'+count+' PNG '+(count===1?'page':'pages')+'</span></div></div>';
+     d.onclick=()=>openPage(cover,group);
+     g.appendChild(d);
+   }
  }
  standalone.forEach(p=>{const d=document.createElement('article');d.className='card'+(p.uncropped?' uncropped':'');const tags = [...new Set([...(p.high_yield?['High Yield']:[]), ...p.tags])].slice(0,4);const tagHTML=tags.map(t=>'<span class="tag '+(t==='CCR'?'ccr':t==='Resus Binder'?'binder':t==='High Yield'?'high':'')+'">'+esc(t)+'</span>').join('');d.innerHTML='<div class="thumb">'+(p.thumb?'<img loading="lazy" src="'+url('thumbs/'+p.thumb)+'" alt="">':'<div style="height:100%;display:grid;place-items:center;background:linear-gradient(145deg,#17304b,#0a1726);color:#aeeeff;font-size:65px" aria-label="Document preview">📄</div>')+'</div><div class="meta"><h4>'+esc(p.title)+'</h4><div class="tags">'+tagHTML+'</div></div>';d.onclick=()=>openPage(p);g.appendChild(d)})
 }
