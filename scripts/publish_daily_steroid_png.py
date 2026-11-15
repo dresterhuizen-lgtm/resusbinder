@@ -19,7 +19,7 @@ PAPER='#f8fafb'; DIV='#d6e2e9'
 FONTS='/usr/share/fonts/truetype/dejavu/'
 def font(size,bold=False):
     return ImageFont.truetype(FONTS+('DejaVuSans-Bold.ttf' if bold else 'DejaVuSans.ttf'),size)
-TITLE=font(60,True); SMALL=font(23); BODY=font(25); HEAD=font(30,True); REF=font(19)
+TITLE=font(60,True); SMALL=font(23); BODY=font(22); HEAD=font(28,True); REF=font(18)
 def parse(path):
     data=path.read_text(encoding='utf-8')
     _,front,body=data.split('---\n',2)
@@ -53,8 +53,8 @@ def main():
     d.text((74,214),'EVIDENCE-INFORMED  •  ADULT SEPTIC SHOCK  •  14 NOVEMBER 2026',font=font(22,True),fill=TEAL)
     # Stable editorial two-column reading order, preserving whole sections.
     columns=[
-      ['PHYSIOLOGY & INDICATION','WHAT THE 2026 RESEARCH FOUND','APPRAISAL & TRAPS'],
-      ['RECOGNITION & DIFFERENTIAL','FIRST-HOUR APPROACH','HIGH-YIELD TAKEAWAY','REFERENCES']
+      ['CURRENT PRACTICE: CANADA FIRST','WHY STEROIDS HELP','FIRST-HOUR ED / RESUSCITATION PLAN'],
+      ['RECOGNITION / POCUS / TRAPS','WHAT THE 2026 STUDY ADDS','THE TAKE-HOME MESSAGE','REFERENCES / GUIDELINES']
     ]
     column_x=[72,936]; WIDTH=790
     for col,headings in enumerate(columns):
@@ -65,28 +65,54 @@ def main():
             projected=60
             for text in rows:
                 txt=re.sub(r'^\d+\. ','',text) if heading=='FIRST-HOUR APPROACH' else text
-                projected+=len(wrap(d,txt,BODY,WIDTH-30))*39+20
-            if y+projected>H-152:
+                projected+=len(wrap(d,txt,BODY,WIDTH-43))*34+13
+            if y+projected>H-148:
                 raise RuntimeError(f'Section overflows the single page: {heading} ends at {y+projected}')
-            d.rounded_rectangle((x,y,x+WIDTH,y+53),radius=7,fill=DEEP)
-            d.text((x+17,y+9),heading,font=HEAD,fill='#ffffff')
-            y+=75
+            d.rounded_rectangle((x,y,x+WIDTH,y+49),radius=7,fill=DEEP)
+            d.text((x+17,y+9),heading,font=HEAD if d.textbbox((0,0),heading,font=HEAD)[2]<WIDTH-35 else font(24,True),fill='#ffffff')
+            y+=62
             for item in rows:
-                numbered=re.match(r'^(\d+)\. (.+)$',item)
+                item=re.sub(r'^-\\s*', '', item)
+                numbered=re.match(r'^(\\d+)\\. (.+)
+    d.line((72,H-105,W-72,H-105),fill=DIV,width=3)
+    d.text((72,H-88),'REVIEW LEVEL: ORIGINAL ABSTRACT REVIEWED; NETWORK COMPARISONS REQUIRE CAUTION',font=REF,fill=MUTED)
+    d.text((W-265,H-88),'RESUS BINDER',font=font(20,True),fill=TEAL)
+    OUT.parent.mkdir(exist_ok=True)
+    im.save(OUT,optimize=True)
+    with Image.open(OUT) as check:
+        assert check.size==(W,H) and check.format=='PNG'
+        check.verify()
+    items=json.loads(CATALOG.read_text())
+    entry={
+      'id':IDENT,'title':'Daily Resuscitation Learning — 14 Nov 2026 · Steroids in septic shock',
+      'file':OUT.name,'thumb':'','categories':['Shock & Hemodynamics'],
+      'tags':['Studies','Septic Shock','Steroids','Hydrocortisone','Fludrocortisone'],
+      'studies':True,'binder':False,'ccr':False,'width':W,'height':H,
+      'high_yield':True,'recent_rank':0,
+      'collection':'Daily Resuscitation Learning · 14 Nov 2026','collection_order':1
+    }
+    items=[i for i in items if i.get('id')!=IDENT]
+    CATALOG.write_text(json.dumps([entry]+items,ensure_ascii=False,indent=2)+'\n')
+    print(f'Validated {OUT.name}: {W}x{H}; catalog entry: {IDENT}')
+if __name__=='__main__':
+    main()
+,item)
+                refs=heading=='REFERENCES / GUIDELINES'
+                size=REF if refs else BODY
+                leading=26 if refs else 34
                 if numbered:
-                    d.text((x+8,y+3),numbered.group(1)+'.',font=font(24,True),fill=TEAL)
-                    lines=wrap(d,numbered.group(2),BODY,WIDTH-60); indent=45
+                    d.text((x+7,y+2),numbered.group(1)+'.',font=font(23,True),fill=TEAL)
+                    lines=wrap(d,numbered.group(2),size,WIDTH-60)
+                    indent=40
                 else:
-                    lines=wrap(d,item,BODY,WIDTH-16);indent=8
-                size=REF if heading=='REFERENCES' else BODY
-                if heading=='REFERENCES':
-                    lines=wrap(d,item,size,WIDTH-16)
-                leading=31 if heading=='REFERENCES' else 39
+                    d.ellipse((x+8,y+12,x+16,y+20),fill=TEAL)
+                    lines=wrap(d,item,size,WIDTH-41)
+                    indent=28
                 for line in lines:
                     d.text((x+indent,y),line,font=size,fill=INK)
                     y+=leading
-                y+=20 if heading!='REFERENCES' else 12
-            y+=27
+                y+=12 if not refs else 8
+            y+=16
     d.line((72,H-105,W-72,H-105),fill=DIV,width=3)
     d.text((72,H-88),'REVIEW LEVEL: ORIGINAL ABSTRACT REVIEWED; NETWORK COMPARISONS REQUIRE CAUTION',font=REF,fill=MUTED)
     d.text((W-265,H-88),'RESUS BINDER',font=font(20,True),fill=TEAL)
