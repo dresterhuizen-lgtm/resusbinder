@@ -10,7 +10,7 @@ from PIL import Image,ImageDraw,ImageFont
 
 ROOT=Path(__file__).resolve().parents[1]
 SRC=ROOT/'publications/daily/2026-11-14-steroids-septic-shock.md'
-OUT=ROOT/'assets/daily-2026-11-14-septic-shock-steroids-v2.png'
+OUT=ROOT/'assets/daily-2026-11-14-septic-shock-steroids-v3.png'
 CATALOG=ROOT/'uploads.json'
 IDENT='daily-2026-11-14-septic-shock-steroids'
 W,H=1800,2600
@@ -19,7 +19,7 @@ PAPER='#f8fafb'; DIV='#d6e2e9'
 FONTS='/usr/share/fonts/truetype/dejavu/'
 def font(size,bold=False):
     return ImageFont.truetype(FONTS+('DejaVuSans-Bold.ttf' if bold else 'DejaVuSans.ttf'),size)
-TITLE=font(60,True); SMALL=font(23); BODY=font(20); HEAD=font(27,True); REF=font(17)
+TITLE=font(60,True); SMALL=font(23); BODY=font(27); HEAD=font(31,True); REF=font(21)
 def parse(path):
     data=path.read_text(encoding='utf-8')
     _,front,body=data.split('---\n',2)
@@ -65,18 +65,18 @@ def main():
             projected=60
             for text in rows:
                 txt=re.sub(r'^\d+\. ','',text) if heading=='FIRST-HOUR APPROACH' else text
-                projected+=len(wrap(d,txt,BODY,WIDTH-43))*31+10
+                projected+=len(wrap(d,txt,BODY,WIDTH-43))*39+14
             if y+projected>H-148:
                 raise RuntimeError(f'Section overflows the single page: {heading} ends at {y+projected}')
             d.rounded_rectangle((x,y,x+WIDTH,y+49),radius=7,fill=DEEP)
-            d.text((x+17,y+9),heading,font=HEAD if d.textbbox((0,0),heading,font=HEAD)[2]<WIDTH-35 else font(24,True),fill='#ffffff')
+            d.text((x+17,y+9),heading,font=HEAD if d.textbbox((0,0),heading,font=HEAD)[2]<WIDTH-35 else font(25,True),fill='#ffffff')
             y+=62
             for item in rows:
                 item = re.sub(r'^-\s*', '', item)
                 numbered = re.match(r'^(\d+)\. (.+)$', item)
                 refs = heading == 'REFERENCES / GUIDELINES'
                 size = REF if refs else BODY
-                leading = 25 if refs else 31
+                leading = 31 if refs else 39
                 if numbered:
                     d.text((x+7,y+2), numbered.group(1)+'.', font=font(23,True), fill=TEAL)
                     lines = wrap(d, numbered.group(2), size, WIDTH-60)
@@ -88,8 +88,8 @@ def main():
                 for line in lines:
                     d.text((x+indent,y),line,font=size,fill=INK)
                     y += leading
-                y += 9 if not refs else 7
-            y += 14
+                y += 15 if not refs else 9
+            y += 20
     d.line((72,H-105,W-72,H-105),fill=DIV,width=3)
     d.text((72,H-88),'REVIEW LEVEL: ORIGINAL ABSTRACT REVIEWED; NETWORK COMPARISONS REQUIRE CAUTION',font=REF,fill=MUTED)
     d.text((W-265,H-88),'RESUS BINDER',font=font(20,True),fill=TEAL)
