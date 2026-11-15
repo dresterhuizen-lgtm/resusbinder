@@ -1,34 +1,36 @@
 ---
 title: STEROIDS IN SEPTIC SHOCK
-subtitle: Hydrocortisone, fludrocortisone and the first-hour decision
+subtitle: Alberta / Canadian practice refresher | 80% bedside care, 20% new evidence
 date: 2026-11-14
 category: Shock & Hemodynamics
-source: Original abstract reviewed; full text of Kwon et al. not reviewed
+source: AHS pathway reviewed; Manitoba order set reviewed; SSC 2026 and SCCM 2024 guidance; Kwon 2026 abstract reviewed
 ---
-## PHYSIOLOGY & INDICATION
-Septic shock involves vasoplegia, endothelial dysfunction and impaired catecholamine responsiveness. Glucocorticoids support vascular adrenergic signalling; mineralocorticoid activity influences sodium balance and vascular function.
-Consider adjunctive corticosteroids for adults with persistent vasopressor-dependent septic shock after antibiotics, source control, haemodynamic assessment and appropriate initial resuscitation. Steroids do not replace these interventions.
-## RECOGNITION & DIFFERENTIAL
-Confirm infection-associated circulatory failure using serial perfusion findings and vasopressor requirement. Consider haemorrhagic, cardiogenic, obstructive and anaphylactic shock, as well as adrenal crisis.
-POCUS: assess LV/RV function, pericardium, lung congestion and venous congestion; evaluate dynamic fluid response only when appropriate. Hypotension alone does not prove fluid responsiveness.
-## FIRST-HOUR APPROACH
-1. Treat infection, start norepinephrine when indicated, and repeatedly assess perfusion, cardiac function and fluid tolerance.
-2. For ongoing vasopressor-dependent septic shock, hydrocortisone 200 mg/day IV (50 mg every 6 h or continuous infusion) is a guideline-supported option.
-3. Consider enteral fludrocortisone 50 micrograms daily alongside hydrocortisone if local protocol and enteral access permit; APROCCHSS used both for 7 days.
-4. Monitor glucose, sodium, potassium, GI bleeding, secondary infection and clinical haemodynamic response; reassess duration with critical care.
-5. Do not routinely increase hydrocortisone to 300 mg/day or more based on this network meta-analysis alone.
-## WHAT THE 2026 RESEARCH FOUND
-Kwon, Kwak and Hong: network meta-analysis of 21 randomized trials and 7,908 patients; 28-day mortality was the primary outcome.
-Hydrocortisone 200-299 mg/day plus fludrocortisone 50 micrograms/day versus placebo: odds ratio 0.78 (95% CI 0.64-0.96).
-Hydrocortisone at least 300 mg/day versus placebo: odds ratio 0.53 (95% CI 0.29-0.96), alongside greater concern for superinfection.
-Hydrocortisone 200 mg/day alone was not statistically significant in the newsletter summary (OR 0.92, 95% CI 0.81-1.04). Non-significance does NOT establish ineffectiveness.
-## APPRAISAL & TRAPS
-Network meta-analysis combines direct and indirect comparisons. The apparent combination benefit depends substantially on APROCCHSS; direct modern head-to-head data remain sparse.
-Older trials differ in shock populations, concomitant treatment and infection management. Network rankings are not definitive individual-patient recommendations.
-Odds ratios cannot be converted into absolute risk reductions without a reliable baseline risk. Steroid decisions should follow local Alberta/Canadian protocols and patient context.
-Do not routinely give corticosteroids for infection without shock. Suspected adrenal crisis is a separate urgent indication requiring its own management pathway.
-## HIGH-YIELD TAKEAWAY
-For persistent vasopressor-dependent septic shock, hydrocortisone 200 mg/day IV remains a practical evidence-supported regimen. Adding enteral fludrocortisone 50 micrograms/day can be considered. The 2026 network analysis is supportive, not definitive; it does not justify routine high-dose hydrocortisone.
-## REFERENCES
-Kwon S, Kwak SG, Hong HL. J Crit Care. 2026;97:155750. doi:10.1016/j.jcrc.2026.155750.
-Teja B et al. Am J Respir Crit Care Med. 2024;209:1219-1228. doi:10.1164/rccm.202310-1785OC.
+## CURRENT PRACTICE: CANADA FIRST
+- Manitoba Shared Health adult sepsis orders: consider hydrocortisone 50 mg IV every 6 h for refractory shock after at least 4 h of norepinephrine at 0.25 mcg/kg/min or more. This is a MANITOBA order set, not an Alberta mandate.
+- The 2026 Surviving Sepsis Campaign conditionally suggests IV corticosteroids for septic shock (low certainty). The 2024 SCCM/ESICM update suggests steroids, but advises against short-course hydrocortisone-equivalent doses above 400 mg/day.
+- AHS adult suspected-sepsis protocol addresses initial ED recognition, investigation and fluid assessment; it does NOT establish a province-wide hydrocortisone order in the material verified here. Confirm current local ICU / ED practice.
+## WHY STEROIDS HELP
+- Vasoplegia and endothelial dysfunction lower effective vascular tone despite catecholamines. Glucocorticoids improve adrenergic responsiveness and modulate inflammation; hydrocortisone also has mineralocorticoid activity.
+- The clinical target is faster shock resolution and less vasopressor exposure, not treatment of an isolated cortisol number or immediate correction of blood pressure.
+## FIRST-HOUR ED / RESUSCITATION PLAN
+- 1. Recognize infection plus circulatory failure; cultures without delaying antibiotics, early source control, serial mentation / CRT / lactate and perfusion checks. Use balanced crystalloid in reassessed aliquots when preload is limiting.
+- 2. Titrate norepinephrine to an initial MAP around 65 mmHg while reassessing flow and organ perfusion; choose additional fluids by physiology, not by hypotension alone.
+- 3. If vasopressor need persists despite appropriate early management, consider hydrocortisone 50 mg IV every 6 h (200 mg/day) or 200 mg/24 h infusion. Exact timing and duration follow local critical-care orders.
+- 4. Consider adding fludrocortisone 50 micrograms enterally once daily if local protocol supports it and enteral administration is feasible. Combination therapy was used for 7 days in APROCCHSS; not universally required.
+- 5. Monitor glucose, sodium, potassium, infection, GI bleeding and vasopressor requirements. Reassess steroid duration as shock resolves; coordinate the course with ICU.
+## RECOGNITION / POCUS / TRAPS
+- Reconsider mixed shock: haemorrhage, RV failure / pulmonary embolism, LV dysfunction, tamponade, hypovolaemia and adrenal crisis. Adrenal crisis requires urgent stress-dose therapy on its own merits.
+- Cardiac POCUS: LV/RV size and function, pericardium and gross obstructive patterns. Add lung B-lines and venous Doppler when congestion is suspected; ultrasound guides haemodynamic phenotype, NOT steroid eligibility.
+- Avoid steroids for uncomplicated sepsis without shock solely for a presumed haemodynamic benefit. Do not delay antibiotics or source control while debating fludrocortisone.
+## WHAT THE 2026 STUDY ADDS
+- Kwon, Kwak and Hong: network meta-analysis, 21 RCTs, 7,908 adults; main endpoint was 28-day mortality. Hydrocortisone 200-299 mg/day plus fludrocortisone 50 micrograms/day versus placebo: OR 0.78 (95% CI 0.64-0.96).
+- At least 300 mg/day hydrocortisone versus placebo: OR 0.53 (0.29-0.96), but small older trials, indirect comparisons and infection risks limit confidence. This does NOT establish superiority over standard 200 mg/day.
+- Research level: ORIGINAL ABSTRACT REVIEWED, not full text. Direct modern regimen comparisons are limited. Reinforces consideration of adjunct steroids; not a mandate to change doses.
+## THE TAKE-HOME MESSAGE
+- Persistent vasopressor-dependent septic shock: hydrocortisone 200 mg/day IV is a practical Canadian-supported option. Fludrocortisone may be considered. First treat infection and the actual circulatory physiology; local Alberta orders govern implementation.
+## REFERENCES / GUIDELINES
+- AHS. Suspected Sepsis Assessment and Treatment - Adult, HCS-09-19 (document reviewed); publicshare.albertahealthservices.ca.
+- Shared Health Manitoba. Adult Sepsis and Septic Shock Standard Orders (2025); healthproviders.sharedhealthmb.ca.
+- SSC 2026. Crit Care Med. doi:10.1097/CCM.0000000000007075.
+- Chaudhuri D et al. Crit Care Med. 2024. doi:10.1097/CCM.0000000000006172.
+- Kwon S et al. J Crit Care. 2026;97:155750. doi:10.1016/j.jcrc.2026.155750.
